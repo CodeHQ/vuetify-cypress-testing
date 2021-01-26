@@ -1,6 +1,6 @@
 {
   "name": "vuetify-cypress-testing",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "keywords": ["vuetify", "cypress", "e2e", "testing"],
   "main": "index.js",
