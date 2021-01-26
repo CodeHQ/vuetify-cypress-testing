@@ -1,0 +1,20 @@
+{
+  "name": "vuetify-cypress-testing",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": ["vuetify", "cypress", "e2e", "testing"],
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeHQ/vuetify-cypress-testing.git"
+  },
+  "author": "craigp@codehq.co.za",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CodeHQ/vuetify-cypress-testing/issues"
+  },
+  "homepage": "https://github.com/CodeHQ/vuetify-cypress-testing#readme"
+}
