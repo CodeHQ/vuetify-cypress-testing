@@ -1,8 +1,13 @@
 {
   "name": "vuetify-cypress-testing",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
-  "keywords": ["vuetify", "cypress", "e2e", "testing"],
+  "keywords": [
+    "vuetify",
+    "cypress",
+    "e2e",
+    "testing"
+  ],
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/CodeHQ/vuetify-cypress-testing/issues"
   },
-  "homepage": "https://github.com/CodeHQ/vuetify-cypress-testing#readme"
+  "homepage": "https://github.com/CodeHQ/vuetify-cypress-testing#readme",
+  "dependencies": {
+    "cypress-file-upload": "^5.0.2"
+  }
 }
