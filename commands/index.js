@@ -5,6 +5,15 @@ Cypress.Commands.add('vSelect', (selector, option) => {
   cy.waitFor('.v-menu__content');
   cy.get('.v-menu__content').contains(option).click();
 });
+Cypress.Commands.add('vSelectRandom', (selector) => {
+  cy.log(selector);
+  cy.get(selector).parent().click();
+  cy.waitFor('.v-list-item__title');
+  // const children = cy.get('.v-list-item__title').its('length');
+  const num = Math.floor(Math.random() * 10);
+  cy.log(`${selector} number ${num}`);
+  cy.get('.v-list-item__title').eq(num).click();
+});
 Cypress.Commands.add('vAttachFile', (selector, filePath) => {
   cy.get(selector).find('input').attachFile(filePath);
 });
