@@ -6,11 +6,14 @@ Cypress.Commands.add('vSelect', (selector, option) => {
   cy.get('.v-menu__content').contains(option).click();
 });
 Cypress.Commands.add('vSelectRandom', (selector) => {
-  cy.log(selector);
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  const num = Math.floor(Math.random() * (max - min + 1)) + min;
+  cy.log(`Random number: ${num}`);
   cy.get(selector).parent().click();
   cy.waitFor('.v-list-item__title');
   // const children = cy.get('.v-list-item__title').its('length');
-  const num = Math.floor(Math.random() * 10);
+  // const num = Math.floor(Math.random() * 10);
   cy.log(`${selector} number ${num}`);
   cy.get('.v-list-item__title').eq(num).click();
 });
