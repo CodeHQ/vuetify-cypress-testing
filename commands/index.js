@@ -5,6 +5,7 @@ Cypress.Commands.add('vSelect', (selector, option) => {
   cy.waitFor('.v-menu__content');
   cy.get('.v-menu__content').contains(option).click();
 });
+
 Cypress.Commands.add('vSelectRandom', (selector) => {
   min = Math.ceil(min);
   max = Math.floor(max);
@@ -17,9 +18,18 @@ Cypress.Commands.add('vSelectRandom', (selector) => {
   cy.log(`${selector} number ${num}`);
   cy.get('.v-list-item__title').eq(num).click();
 });
+
+Cypress.Commands.add('vMenu', (selector, option) => {
+  cy.get(selector).click();
+  cy.get('[role=menu] [role=menuitem] span')
+    .contains(option)
+    .click();
+});
+
 Cypress.Commands.add('vAttachFile', (selector, filePath) => {
   cy.get(selector).find('input').attachFile(filePath);
 });
+
 Cypress.Commands.add('vTimerSelect', (selector, hourNumber, minuteNumber, pm) => {
   cy.get(selector).click();
   cy.get('.v-time-picker-clock__item').eq(hourNumber).click();
@@ -30,6 +40,7 @@ Cypress.Commands.add('vTimerSelect', (selector, hourNumber, minuteNumber, pm) =>
   }
   cy.get('[data-cy=TimeField-Ok]').click();
 });
+
 Cypress.Commands.add('responsiveScreenShots', (name) => {
   const viewPorts = [
     'ipad-2',
